@@ -14,5 +14,7 @@
 ### Types of Cloud:
 	1. Private Cloud - Works on private infrastructure. A single organization or business uses this cloud.
 	2. Public Cloud - A third-party provider owns and operates the cloud, which is accessible to anyone over the internet.
-	3. Hybrid Cloud - Combination of private cloud with a public cloud. store sensitive data on-premises while using the cloud for less sensitive data.
+	3. Hybrid Cloud 
+ 		- Combination of private cloud with a public cloud. 
+ 		- store sensitive data on-premises while using the cloud for less sensitive data.
 
