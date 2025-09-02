@@ -45,4 +45,63 @@ Ex: Office 365, Gmail
  - AWS Regions are separate geographic areas. AWS Regions consist of multiple, physically separated and isolated Availability zones that are connected with low latency, high throughput, highly redundant networking. 
 Availability zones consist of one or more discrete data centres, each with redundant power, networking, and connectivity, and housed in separate facilities.
 
+ - Data Center / Availability Zone = Physical Host 1 + Physical Host 2 + Physical Host ...
+ - Region = Data Center 1 + Data Center 2 + Data Center ...
+ - AWS Cloud = Region 1 + Region 2 + Region 3 + ...
+
+### Amazon EC2:
+ - Amazon Elastic Compute Cloud (EC2) is a web service that provides secure, resizable compute capacity in the cloud. EC2 is a web service that allows users to create and run virtual machines (instances) in the cloud.
+An EC2 instance works like a VM for us which gets created on a Physical Host. 
+ - Combination of multiple physical hosts will form one Availability Zone or a Data Centre.
+ - Combination of multiple Availability Zones will create a region.
+ - Combination of multiple regions will form the AWS Cloud. 
+
+### AMI:
+ - AMI stands for Amazon Machine Image, which is a template used to create virtual servers in Amazon Web Services (AWS). AMIs are used to launch instances of Amazon Elastic Compute Cloud (EC2).
+
+### ENA 
+ – Elastic Network Adapter - For High-Speed Connectivity. If it is yes, then it means the AMI supports high speed connectivity.
+
+### Key Pair:
+ - A key pair, consisting of a public key and a private key, private key for your computer and a public key for your instance. It is a set of security credentials that you use to prove your identity when connecting to an Amazon EC2 instance. 
+ - Key Pair = public key + private key
+ - For Linux instances, the private key allows you to securely SSH into your instance. 
+ - For Windows instances, the private key is required to decrypt the administrator password, which you then use to connect to your instance.
+ - Amazon EC2 stores the public key on your instance, and you store the private key. 
+ - It's important that you store your private key in a secure place because anyone who possesses your private key can connect to your instances that use the key pair.
+
+### Security Group:
+ - A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. 
+ - When you launch an instance, you can specify one or more security groups. If you don't specify a security group, Amazon EC2 uses the default security group for the VPC. After you launch an instance, you can change its security groups. There is no additional charge for using security groups. 
+
+### Status Check:
+	1. System Status Check ===> 
+		This check monitors the underlying AWS infrastructure that your EC2 instance runs on. A failure of this check indicates an issue with the physical host. 
+		Ex:
+			Loss of network connectivity
+			Loss of system power
+			Software or hardware issues on the host
+			Hardware failure impacting network reachability
+		Resolution: AWS involvement is usually required to fix a failed system check. 
+	2. Instance Status Check =>
+		This check monitors the health of the instance's operating system (OS) and its software and network configuration.
+		Ex:
+			Failed to boot the OS
+			Corrupted file system
+			Exhausted memory or CPU
+			Incorrect networking or startup configuration
+			Incompatible kernel
+		Resolution: You must troubleshoot the problem from within the instance. 
+	3. EBS Status Check ======> 
+		This check monitors the health of the Amazon EBS volumes attached to the instance. 
+		It confirms that the volumes are reachable and that I/O operations can be completed. 
+		Resolution: Check CloudWatch metrics for the EBS volume.
+	
+
+
+
+
+
+
+
 
