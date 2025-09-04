@@ -1,7 +1,7 @@
 ### Cloud Computing:
-	- Cloud is a network of remote servers.
-	- Cloud Computing is the delivery of computing resources over internet.
-	- computing resources - Ex : Storage - SSD, DB, Software, etc.
+ - Cloud is a network of remote servers.
+ - Cloud Computing is the delivery of computing resources over internet.
+ - computing resources - Ex : Storage - SSD, DB, Software, etc.
 
 ### Advantages of Cloud Computing:
 	1. No need to maintain physical Data Center.
@@ -23,17 +23,17 @@
 
 ### Cloud Service Models:
 1.	IaaS (Infrastructure as a Service):
-IaaS is a type of cloud computing that provides users with access to computing resources, like servers, storage, and networking. It allows users to rent these resources on a pay-as-you-go basis, so they don't need to invest in hardware or software upfront. 
-IaaS customers have full control over the virtual machines and can install and configure their own software and applications.
-Ex: Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine (GCE)
+ - IaaS is a type of cloud computing that provides users with access to computing resources, like servers, storage, and networking. It allows users to rent these resources on a pay-as-you-go basis, so they don't need to invest in hardware or software upfront. 
+ - IaaS customers have full control over the virtual machines and can install and configure their own software and applications.
+ - Ex: Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine (GCE)
 
 2. PAAS - Platform as a Service
-PaaS is a cloud computing model in which customers can develop, run, and manage web applications without having to worry about the underlying infrastructure. PaaS provides customers a platform to build and deploy applications quickly and easily.
-Ex: AWS RDS
+ - PaaS is a cloud computing model in which customers can develop, run, and manage web applications without having to worry about the underlying infrastructure. PaaS provides customers a platform to build and deploy applications quickly and easily.
+ - Ex: AWS RDS
 
 3. SAAS - Software as a Service:
-SaaS is a cloud computing model in which software applications are hosted on a remote server, and customers access them through a web browser. SaaS eliminates the need for customers to install and manage the software on their own systems.
-Ex: Office 365, Gmail
+ - SaaS is a cloud computing model in which software applications are hosted on a remote server, and customers access them through a web browser. SaaS eliminates the need for customers to install and manage the software on their own systems.
+ - Ex: Office 365, Gmail
 
 ### Latency:
  - latency is the delay between a request sent from a user's device and the response from a cloud server, measured in milliseconds, and is influenced by factors like physical distance, network congestion, server processing time, and the number of network hops. High latency leads to slow performance.
@@ -99,16 +99,15 @@ An EC2 instance works like a VM for us which gets created on a Physical Host.
 	
 
 ### Public IP:
-•	A public IP address is an IPv4 address that's reachable from the Internet. You can use public addresses for communication between your instances and the Internet.
-•	A public IP address is assigned to your instance from Amazon's pool of public IPv4 addresses, and is not associated with your AWS account. When a public IP address is disassociated from your instance, it is released back into the public IPv4 address pool, and you cannot reuse it.
-•	AWS releases your instance's public IP address when it is stopped, hibernated, or terminated. Your stopped or hibernated instance receives a new public IP address when it is started.
-•	If you require a persistent public IP address that can be associated to and from instances as you require, use an Elastic IP address instead.
-•	AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with running instances and Elastic IP addresses.
-
+ - A public IP address is an IPv4 address that's reachable from the Internet. You can use public addresses for communication between your instances and the Internet.
+ - A public IP address is assigned to your instance from Amazon's pool of public IPv4 addresses, and is not associated with your AWS account. When a public IP address is disassociated from your instance, it is released back into the public IPv4 address pool, and you cannot reuse it.
+ - AWS releases your instance's public IP address when it is stopped, hibernated, or terminated. Your stopped or hibernated instance receives a new public IP address when it is started.
+ - If you require a persistent public IP address that can be associated to and from instances as you require, use an Elastic IP address instead.
+ - AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with running instances and Elastic IP addresses.
 
 ### Private IP:
-•	A private IPv4 address is an IP address that's not reachable over the Internet. You can use private IPv4 addresses for communication between instances in the same VPC.
-•	A private IPv4 address, regardless of whether it is a primary or secondary address, remains associated with the network interface when the instance is stopped and started, or hibernated and started, and is released when the instance is terminated.
+ - A private IPv4 address is an IP address that's not reachable over the Internet. You can use private IPv4 addresses for communication between instances in the same VPC.
+ - A private IPv4 address, regardless of whether it is a primary or secondary address, remains associated with the network interface when the instance is stopped and started, or hibernated and started, and is released when the instance is terminated.
 
 
 
