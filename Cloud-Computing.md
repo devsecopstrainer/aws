@@ -98,6 +98,17 @@ An EC2 instance works like a VM for us which gets created on a Physical Host.
 		Resolution: Check CloudWatch metrics for the EBS volume.
 	
 
+### Public IP:
+•	A public IP address is an IPv4 address that's reachable from the Internet. You can use public addresses for communication between your instances and the Internet.
+•	A public IP address is assigned to your instance from Amazon's pool of public IPv4 addresses, and is not associated with your AWS account. When a public IP address is disassociated from your instance, it is released back into the public IPv4 address pool, and you cannot reuse it.
+•	AWS releases your instance's public IP address when it is stopped, hibernated, or terminated. Your stopped or hibernated instance receives a new public IP address when it is started.
+•	If you require a persistent public IP address that can be associated to and from instances as you require, use an Elastic IP address instead.
+•	AWS charges for all public IPv4 addresses, including public IPv4 addresses associated with running instances and Elastic IP addresses.
+
+
+### Private IP:
+•	A private IPv4 address is an IP address that's not reachable over the Internet. You can use private IPv4 addresses for communication between instances in the same VPC.
+•	A private IPv4 address, regardless of whether it is a primary or secondary address, remains associated with the network interface when the instance is stopped and started, or hibernated and started, and is released when the instance is terminated.
 
 
 
