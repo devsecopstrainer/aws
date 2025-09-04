@@ -60,7 +60,7 @@ An EC2 instance works like a VM for us which gets created on a Physical Host.
  - AMI stands for Amazon Machine Image, which is a template used to create virtual servers in Amazon Web Services (AWS). AMIs are used to launch instances of Amazon Elastic Compute Cloud (EC2).
 
 ### ENA 
- – Elastic Network Adapter - For High-Speed Connectivity. If it is yes, then it means the AMI supports high speed connectivity.
+ - Elastic Network Adapter - For High-Speed Connectivity. If it is yes, then it means the AMI supports high speed connectivity.
 
 ### Key Pair:
  - A key pair, consisting of a public key and a private key, private key for your computer and a public key for your instance. It is a set of security credentials that you use to prove your identity when connecting to an Amazon EC2 instance. 
