@@ -37,10 +37,10 @@
 
 ## User Data Section
 
- #!/bin/bash
- echo "-------- executing shell script - pass 1 --------"
- yum install nginx -y
- echo "-------- executing shell script - pass 2 --------"
+  - #!/bin/bash
+  - echo "-------- executing shell script - pass 1 --------"
+  - yum install nginx -y
+  - echo "-------- executing shell script - pass 2 --------"
 
 
 
