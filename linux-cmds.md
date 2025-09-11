@@ -9,7 +9,7 @@
  - touch - to create a file
 
    
-### Folder structure:
+## Folder structure:
  - [ec2-user@ip-192-168-1-205 /]$ ls -l
  - total 32
  - lrwxrwxrwx.   1 root root     7 Jan 30  2023 bin -> usr/bin  ----> Contains the binaries - Ex: ls, cp, ...
@@ -33,3 +33,15 @@
  - drwxr-xr-x.  12 root root   144 Aug 13 21:07 usr ----------------> User programs
  - drwxr-xr-x.  19 root root   266 Sep 10 02:46 var ----------------> Variable files ( Log files )
  - [ec2-user@ip-192-168-1-205 /]$
+
+
+## User Data Section
+
+ #!/bin/bash
+ echo "-------- executing shell script - pass 1 --------"
+ yum install nginx -y
+ echo "-------- executing shell script - pass 2 --------"
+
+
+
+
