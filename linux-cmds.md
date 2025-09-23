@@ -51,6 +51,60 @@
 		 - x3 - total number of letters
 
 
+ - head my-file.txt ===> shows top 10 lines	
+ - tail my-file.txt ===> shows bottom 10 lines
+ - 
+ - head -n 20 my-file.txt   ===> shows top 20 lines
+ - tail -n 20 my-file.txt   ===> shows bottom 20 lines
+ - 
+ - head -n -3 my-file.txt   ===> skips last 3 lines and shows the content 
+ - tail -n +3 my-file.txt   ===> reads from line number 3 lines and shows the content
+ - 
+ - tail -f my-file.txt ===> Shows last 10 lines, and file will be in open mode to show newly added contents.
+ - tail -5f my-file.txt ===> Shows last 5 lines, and file will be in open mode to show newly added contents.
+ - 
+ - grep - Global Regular Expression Print
+ - 
+ - grep "Linux" file2   ==> Searches for the content "Linux" inside file2 ==> case sensitive
+ - grep -i "linux" file2   ==> Searches for the content "linux" inside file2 ==> ignore case sensitive
+ - grep -i "linux" *   ==> Searches for the content "linux" inside the directory
+ - grep -in "linux" file2  ==> Searches for the content "linux" inside file2, shows the line number
+ - grep -irn "python" * ==> searches the content inside the folder and the subfolder
+ - 
+ - sed ==> stream editor
+ - sed "s/python/Java/" file3  ==> Shows the preview, how the content will look like after replacing python with Java in file3
+ - sed -i "s/python/Java/" file3   ==> Replaces python with Java in file3
+ - sed -i "2,4 s/Java/PHP/" file3  > Does the replacement in a particular range
+ - sed -i "2 s/easy/difficult/" file3   > Does the replacement in a particular line
+ - sed -i "3d" file3   > Deletes a particular line in a file
+ - sed -i "2,4d" file3 > Deletes a range of lines in a file
+ - 
+ - man --> manual, 
+ - 	ex: man cd
+ - 		man touch
+ - 
+ - find - to search for the file
+ - 
+ - 	find *.txt --> lists all text files on the current location
+ - 
+ - 	sudo find /home -type f   ====> lists all files under /home location	
+ - 	sudo find /home -type f -empty  ====> lists all empty files under /home location
+ - 
+ - 	sudo find /home -type d   ====> lists all directories under /home location
+ - 	sudo find /home -type d -empty  ====> lists all empty directories under /home location
+ - 
+ - hostname
+ - hostnamectl
+ - ifconfig
+ - wget --> Download files from internet.
+ - history
+ - ping google.com ==> to check if connectivity to the particular website is there or not.
+ - yum ==> to install/remove softwares
+ - 
+ - yum list java*
+ - sudo yum install java-22-amazon-corretto.x86_64 -y
+ - sudo yum remove java* -y
+
 
 
 
