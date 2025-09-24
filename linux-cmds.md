@@ -121,11 +121,11 @@
 
  - Create user in Linux: 
 	useradd <user-name>
-	Ex: useradd aws-user
-	Ex: useradd -c "For Testing Team" sit-user
-	In /etc/passwd file:
-		aws-user:x:1001:1001::/home/aws-user:/bin/bash
-		sit-user:x:1003:1003:For Testing Team:/home/sit-user:/bin/bash
+	 - Ex: useradd aws-user
+	 - Ex: useradd -c "For Testing Team" sit-user
+	 - In /etc/passwd file:
+		- aws-user:x:1001:1001::/home/aws-user:/bin/bash
+		- sit-user:x:1003:1003:For Testing Team:/home/sit-user:/bin/bash
 		
 		aws-user = user name
 		x = password
