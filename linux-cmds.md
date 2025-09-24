@@ -94,8 +94,9 @@
  - 	sudo find /home -type d -empty  ====> lists all empty directories under /home location
  - 
  - hostname
- - hostnamectl
+ - hostnamectl - more information about the VM
  - ifconfig
+ - netstat -tulpn --> to check all ports running on the system
  - wget --> Download files from internet.
  - history
  - ping google.com ==> to check if connectivity to the particular website is there or not.
@@ -104,6 +105,38 @@
  - yum list java*
  - sudo yum install java-22-amazon-corretto.x86_64 -y
  - sudo yum remove java* -y
+ - In Linux, we have 3 types of users:
+	1. super user --> root --> home dir location = /root
+	2. normal user --> ec2-user --> home dir location = /home/ec2-user
+	3. system user Ex: ftp --> home dir location = /var/ftp
+
+ - When we create a user, following things happen by default:
+	1. A home directory will be created --> under /home
+	2. An entry in /etc/passwd
+	3. Unique UID and GID will be given to the user.
+
+ - cat /etc/passwd ==> This file contains all user details
+ - cat /etc/group  ==> This file contains all group details
+
+
+ - Create user in Linux: 
+	useradd <user-name>
+	Ex: useradd aws-user
+	Ex: useradd -c "For Testing Team" sit-user
+	In /etc/passwd file:
+		aws-user:x:1001:1001::/home/aws-user:/bin/bash
+		sit-user:x:1003:1003:For Testing Team:/home/sit-user:/bin/bash
+		
+		aws-user = user name
+		x = password
+		1001 = user id
+		1001 = group id
+		For Testing Team = Comment
+		/home/aws-user = Default Home Directory
+		/bin/bash = Shell
+
+ - [root@ip-192-168-1-222 home]# id aws-user
+ - uid=1001(aws-user) gid=1001(aws-user) groups=1001(aws-user)
 
 
 
