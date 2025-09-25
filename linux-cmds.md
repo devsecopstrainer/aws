@@ -105,41 +105,7 @@
  - yum list java*
  - sudo yum install java-22-amazon-corretto.x86_64 -y
  - sudo yum remove java* -y
- - In Linux, we have 3 types of users:
-	1. super user --> root --> home dir location = /root
-	2. normal user --> ec2-user --> home dir location = /home/ec2-user
-	3. system user Ex: ftp --> home dir location = /var/ftp
-
- - When we create a user, following things happen by default:
-	1. A home directory will be created --> under /home
-	2. An entry in /etc/passwd
-	3. Unique UID and GID will be given to the user.
-
- - cat /etc/passwd ==> This file contains all user details
- - cat /etc/group  ==> This file contains all group details
-
-
- - Create user in Linux: 
-	useradd <user-name>
-	 - Ex: useradd aws-user
-	 - Ex: useradd -c "For Testing Team" sit-user
-	 - In /etc/passwd file:
-		- aws-user:x:1001:1001::/home/aws-user:/bin/bash
-		- sit-user:x:1003:1003:For Testing Team:/home/sit-user:/bin/bash
-		
-		aws-user = user name
-		x = password
-		1001 = user id
-		1001 = group id
-		For Testing Team = Comment
-		/home/aws-user = Default Home Directory
-		/bin/bash = Shell
-
- - [root@ip-192-168-1-222 home]# id aws-user
- - uid=1001(aws-user) gid=1001(aws-user) groups=1001(aws-user)
-
-
-
+ 
 
    
 ## Folder structure:
@@ -174,6 +140,80 @@
   - echo "-------- executing shell script - pass 1 --------"
   - yum install nginx -y
   - echo "-------- executing shell script - pass 2 --------"
+
+
+## User and Group Creation
+
+- In Linux, we have 3 types of users:
+	1. super user --> root --> home dir location = /root
+	2. normal user --> ec2-user --> home dir location = /home/ec2-user
+	3. system user Ex: ftp --> home dir location = /var/ftp
+
+ - When we create a user, following things happen by default:
+	1. A home directory will be created --> under /home
+	2. An entry in /etc/passwd
+	3. Unique UID and GID will be given to the user.
+
+ - cat /etc/passwd ==> This file contains all user details
+ - cat /etc/group  ==> This file contains all group details
+
+
+ - Create user in Linux: 
+	useradd <user-name>
+	 - Ex: useradd aws-user
+	 - Ex: useradd -c "For Testing Team" sit-user
+	 - In /etc/passwd file:
+		- aws-user:x:1001:1001::/home/aws-user:/bin/bash
+		- sit-user:x:1003:1003:For Testing Team:/home/sit-user:/bin/bash
+		
+		aws-user = user name
+		x = password
+		1001 = user id
+		1001 = group id
+		For Testing Team = Comment
+		/home/aws-user = Default Home Directory
+		/bin/bash = Shell
+
+ - [root@ip-192-168-1-222 home]# id aws-user
+ - uid=1001(aws-user) gid=1001(aws-user) groups=1001(aws-user)
+
+
+ - Customize the home directory for newly created user:
+	 - useradd -m -d /home/sit -c "Fot Testing Team" test-user
+
+ - Delete a user:
+	1. userdel <user_name>
+	 - It performs following activities:
+		 - It will delete the user, 
+		 - removes the entry from passwd file, 
+		 - deletes the group which got created during user creation.
+		 - NB - If the group will be attached to other users, then it won't get deleted.
+
+	 - userdel -f <user_name>
+		- performs above activities mentioned in #1 
+		- force delete even if the user is logged in
+		
+	 - userdel -r <user_name>
+		- performs above activities mentioned in #1
+		- Removes the home directory
+	
+	 - userdel -rf <user_name>
+		- performs above activities mentioned in #1 
+		- force delete even if the user is logged in
+		- Removes the home directory
+
+ - Create Group:
+	groupadd <group_name>
+
+ - Delete Group:
+	groupdel <group_name>
+
+ - Add user to a Group:
+	usermod -G <group_name> <user_name>
+
+
+
+
 
 
 
