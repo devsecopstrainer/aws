@@ -221,7 +221,7 @@
  - Remove a user from a group: gpasswd -d <user_name> <group_name>
  - Change the default group of a user: usermod -g <existing_another_group_name> <user_name>
  - Remove all secondary/supplementary groups from username, leaving them as a member of only their primary group.
-	usermod -G "" <user_name>
+	 - usermod -G "" <user_name>
 
 ## Absolute Path and Relative Path:
  - Absolute Path = Starts from the root directory (indicated by a forward slash /) and provides the full, unambiguous location of a file or directory.
