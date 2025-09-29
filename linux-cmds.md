@@ -212,7 +212,27 @@
 	usermod -G <group_name> <user_name>
 
 
+ - To check all users: cat /etc/passwd
+ - To check all groups: cat /etc/group
+ - To check the user details: id <user_name>
+ - To create a user and add it to an existing group: useradd -g <group_name> <user_name>
+ - Add existing user to existing group: usermod -G <group_name> <user_name>  ==> It will allow  add user to only one second group.
+ - Add existing user to existing group: usermod -a -G <group_name> <user_name>
+ - Remove a user from a group: gpasswd -d <user_name> <group_name>
+ - Change the default group of a user: usermod -g <existing_another_group_name> <user_name>
+ - Remove all secondary/supplementary groups from username, leaving them as a member of only their primary group.
+	usermod -G "" <user_name>
 
+## Absolute Path and Relative Path:
+ - Absolute Path = Starts from the root directory (indicated by a forward slash /) and provides the full, unambiguous location of a file or directory.
+ - Relative path = specifies the location of a file or directory in relation to your current working directory, making it shorter and more convenient for local navigation but dependent on your current location to be valid. 
+
+## Soft Link and Hard Link:
+ - Soft Link = A soft link is a special type of file that contains a path to another file or directory. It acts as a pointer or a shortcut to the target.
+	 - ln -s <src_file_name> <shortcut_name>
+
+ - Hard Link = Backup, it's another name for the same file.
+	 - ln <src_file_name> <backup_file_name>
 
 
 
