@@ -235,6 +235,72 @@
 	 - ln <src_file_name> <backup_file_name>
 
 
+## Change Hostname
+ - hostnamectl set-hostname <new_host_name>
+
+##  Set Password for a User
+ - passwd <user_name>
+
+## Login to VM by:
+	1. Key Based (Public Key + Private Key)
+	2. Password Based (By default disabled)
+
+## Enable Password Based authentication:
+	- sudo su
+	- groupadd devops
+	- useradd -g devops devops-user
+	- id devops-user
+	- passwd devops-user
+	- sudo vi /etc/ssh/sshd_config
+		- do the change:
+			- PasswordAuthentication yes
+		- Save and exit.
+	
+## systemctl commands:
+	- status
+	- start
+	- stop
+	- restart
+	- reload
+	- enable
+
+	- sudo systemctl reload sshd
+
+## Login through password
+	- ssh devops-user@3.109.157.209
+
+## Archiving files and directories:
+=========================================
+	- gzip:	gzip <file_name>
+		- To create a compressed file (zip file)
+		- File size gets reduced
+		- Actual file gets converted to zip file with extension gz
+		- Actual file gets deleted, zip file gets created
+
+	- gunzip: gunzip <file_name>
+		- Unzip a file
+		- zip file gets deleted, Actual file gets created
+	
+	- zip:
+		- To create a compressed file (zip file)
+		- zip <zip_file_name_to_be_created> <existing_file_name>
+		- Actual file will be there and one zip file gets created
+
+	- tar: works on directories
+		tar -cvf <zip_file_name_to_be_created> <existing_dir_name>
+		c - create
+		v - verbous
+		f - file
+	
+	- untar:
+		tar -xvf <existing_tar_file_name>
+		x - extract
+	
+	- tar -xzvf <existing_tar_zip_file_name>
+
+
+
+
 
 
 
