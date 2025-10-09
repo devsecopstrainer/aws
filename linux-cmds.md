@@ -269,8 +269,7 @@
 ## Login through password
 	- ssh devops-user@3.109.157.209
 
-## Archiving files and directories:
-=========================================
+## Archiving files and directories
 	- gzip:	gzip <file_name>
 		- To create a compressed file (zip file)
 		- File size gets reduced
