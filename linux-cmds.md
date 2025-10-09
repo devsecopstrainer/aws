@@ -298,9 +298,31 @@
 	
 	- tar -xzvf <existing_tar_zip_file_name>
 
+## Process Management Commands
+ - Process - When you start a program or application in Linux, it runs as a process.
+
+	- ps -ef ==> List all the processes running
+	- ps -ef | grep <process_name> ===> Search for a particular process
+	
+	- kill -15 <process_id>  ==> safe way of terminating a process
+	- kill -9 <process_id>  ===> forcefully terminating a process
 
 
+## File Permission
 
+ - file ==>  -
+ - directory ==> d
+ - link ==> l	
 
+ - 4 = r = read
+ - 2 = w = write
+ - 1 = x = execute
+ - 0 = no permission
+
+- rwx(1) rwx(2) rwx(3)
+
+ - rwx(1) = user
+ - rwx(2) = primary group
+ - rwx(3) = other group
 
 
