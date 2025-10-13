@@ -325,3 +325,58 @@
  - rwx(3) = other group
 
 
+## Change file permission in 2 ways:
+ - 	1. symbolic link 	==> u, g, o (+/-/=)
+ - 	2. Absolute method  ==> we use numbers
+ - 
+ - 4 = r = read
+ - 2 = w = write
+ - 1 = x = execute
+ - 0 = no permission
+ - 
+ - chmod u=rwx,g=rwx,o=rwx file.txt
+ - chmod u=rxw,g=rxw,o=rxw file.txt
+ - chmod u=rwx,g=rw,o=rw file.txt
+ - chmod u=rwx,g=rx,o=w file.txt
+ - chmod u=rwx,g-w,o+x file.txt
+ - chmod o-x file.txt
+ - chmod g+w file.txt
+ - chmod ugo= file.txt
+ - 
+ - 
+ - chmod 777 file.txt
+ - chmod 700 file.txt
+ - chmod 666 file.txt
+ - 
+ - chmod 777 ec2-user
+ - 
+ - change ownership of a file: we need sudo access for this.
+ - sudo chown aws-user:aws file.txt
+
+## sudoers
+ - sudo = super user do
+ - 	= Grant admin rights temporarily.
+ - 
+ - 1. Created a group : aws	=====> groupadd aws
+ - 2. Created new user and added to the group : aws-user ==> useradd -g aws aws-user
+ - 3. Tried to perform admin activities by this new user aws-user ==> Failed
+ - 4. Added aws-user in /etc/sudoers file.
+ - 	
+ - 	## Allow root to run any commands anywhere =====> Already there
+ - 	root    ALL=(ALL)       ALL				   =====> Already there
+ - 	aws-user ALL=(ALL) ALL					   =====> We added
+ - 
+ - 5. Tried to perform admin activities ==> Success 
+ - 6. Removed the entry of the user from /etc/sudoers file.
+ - 7. Added the group in /etc/sudoers file.
+ - 	## Allows people in group wheel to run all commands =====> Already there
+ - 	%wheel  ALL=(ALL)       ALL			=====> Already there
+ - 	%aws ALL=(ALL) ALL					=====> We added
+ - 
+ - Key Based Authentication:
+ - ========================
+ - Public Key
+ - Private Key
+ - 
+ - .ssh ===> 700
+ - authorized_keys ==> 600
