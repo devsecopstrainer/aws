@@ -380,3 +380,42 @@
  - 
  - .ssh ===> 700
  - authorized_keys ==> 600
+
+## Connect 2 Linux Machines using ssh
+
+ - create 2 linux machines:
+
+ - In VM 1:
+ - sudo hostnamectl set-hostname vm1
+
+ - 1. create a user as user1===> useradd user1
+ - 2. set the password for user1 ===> passwd user1
+ - 3. switch to user1
+ - 4. do ssh-keygen
+ - 5. Copy the public key and paste in authorized_keys under .ssh of VM2
+
+ - In VM 2:
+ - sudo hostnamectl set-hostname vm2
+
+ - 1. create a user as user2===> useradd user2
+ - 2. set the password for user2 ===> passwd user2
+ - 3. switch to user2
+ - 4. create a directory as .ssh
+ - 5. Create a file as authorized_keys
+ - 6. provide appropriate permission to .ssh and authorized_keys
+ - 7. paste the public key of user1 in authorized_keys
+
+ - Connect to VM2 from VM1: ssh <user_name>@<private_ip>
+
+
+
+
+
+
+
+
+
+
+
+
+
