@@ -407,7 +407,7 @@
 
  - Connect to VM2 from VM1:
 	#### 1 ssh <user_name>@<private_ip>   ============> using private IP
-	#### 2 ssh -i <private_key> <user_name>@<v_ip> ===> using public key
+	#### 2 ssh -i <private_key> <user_name>@<public_ip> ===> using public key
 
 
 
