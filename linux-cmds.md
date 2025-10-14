@@ -405,7 +405,9 @@
  - 6. provide appropriate permission to .ssh and authorized_keys
  - 7. paste the public key of user1 in authorized_keys
 
- - Connect to VM2 from VM1: ssh <user_name>@<private_ip>
+ - Connect to VM2 from VM1:
+	#### 1 ssh <user_name>@<private_ip>   ============> using private IP
+	#### 2 ssh -i <private_key> <user_name>@<v_ip> ===> using public key
 
 
 
