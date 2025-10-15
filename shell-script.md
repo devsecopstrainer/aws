@@ -37,7 +37,7 @@
  - #!/bin/bash
  - #echo "Single Line Comment will start with #"
  - echo "Single Line Comment" # test abc
-<< abc
+ - << abc
  - comment line 1
  - comment line 2
  - comment line 3
