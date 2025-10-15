@@ -28,34 +28,29 @@
 	
 1. hello-world.sh
 
-#!/bin/bash
-echo "Hello World"
+ - #!/bin/bash
+   echo "Hello World"
 
 2. Comment Line in shell script:
-	comment-line.sh
+	 - comment-line.sh
 	
-#!/bin/bash
-
-#echo "Single Line Comment will start with #"
-
-echo "Single Line Comment" # test abc
-
+ - #!/bin/bash
+ - #echo "Single Line Comment will start with #"
+ - echo "Single Line Comment" # test abc
 << abc
-
-comment line 1
-comment line 2
-comment line 3
-comment line 4
-
+ - comment line 1
+ - comment line 2
+ - comment line 3
+ - comment line 4
 abc
 
 3. sleep example:
 	sleep-ex.sh
 
 #!/bin/bash
-echo "Hello World"
-sleep 5s
-echo "Welcome Back"
+ - echo "Hello World"
+ - sleep 5s
+ - echo "Welcome Back"
 
 
 
