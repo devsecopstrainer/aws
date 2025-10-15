@@ -411,6 +411,8 @@
 
 
 
+## tree:
+	sudo yum install tree -y
 
 
 
