@@ -42,7 +42,7 @@
  - comment line 2
  - comment line 3
  - comment line 4
-abc
+ - abc
 
 3. sleep example:
 	sleep-ex.sh
