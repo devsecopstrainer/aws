@@ -68,12 +68,14 @@
 			
 
 ## Steps:
+
 		Create the file : touch script_var_ex.sh
 		Provide Permission: chmod 755 script_var_ex.sh
 		Edit the file: vi script_var_ex.sh
 		Execute the script: sh script_var_ex.sh
 
  - Example: script_var_ex.sh
+   
 		#!/bin/bash
 		MY_VAR_1="Test Data"
 		MY_VAR_2=20
@@ -82,7 +84,7 @@
 		echo "value of variable 2 = $MY_VAR_2"
 		echo $MY_VAR_3
 		
-##Assign command output to a variable:
+## Assign command output to a variable:
 
 		#!/bin/bash
 		name=$(hostname)
@@ -132,7 +134,7 @@
 
  - Ex2:
 
-#!/bin/bash
+		#!/bin/bash
 
 		read -p "Enter User Name: " u_name
 		read -sp "Enter Password: " u_pass
