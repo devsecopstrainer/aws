@@ -121,6 +121,7 @@
 
 ## Silent the input: (-s)
  - Ex1:
+
 		#!/bin/bash
 
 		echo "Enter User Name: "
