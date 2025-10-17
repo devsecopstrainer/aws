@@ -415,6 +415,15 @@
 	sudo yum install tree -y
 
 
+## Additional Commands:
+ - free	 ==> ==> memory usage 
+ - free -m  ==> memory usage in MB
+ - uname -a ==> Check Kernel version
+ - du -k =====> Disk usage in KB
+ - du -m =====> Disk usage in MB
+ - df -m
+ - df -k
+
 
 
 
