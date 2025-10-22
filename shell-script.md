@@ -151,4 +151,103 @@
 		Password is : 123
 
 
+## Arithmetic Operations
+
+			+ : add 
+			- : subtract 
+			* : multiply 
+			/ : divide
+			% : reminder 
+
+### Ex
+
+			#!/bin/bash
+			num1=20
+			num2=10
+			#echo $num1+$num2			# 20+10
+			#echo $(num1+num2)			# num1+num2: command not found
+			echo $((num1+num2))			# 30
+			echo $(expr $num1 % $num2)	# 9
+
+
+
+## Conditional Statements
+ - if, then, elif, else, fi
+
+###Ex:
+			#!/bin/bash
+			num1=20
+			if [ $num1 -eq 20 ]; then
+				echo "Value is 20"
+				echo "Inside if block"
+			fi
+
+
+###Ex:
+
+			#!/bin/bash
+
+			str1="Welcome"
+			str2="Hello"
+
+			# Check if two strings are equal or not
+			if [ $str1 == $str2 ]; then
+				echo "Strings are equal"
+			else
+				echo "Strings are not equal"
+			fi
+
+
+###Ex:
+
+			#!/bin/bash
+
+			num1=20
+
+			if [ $num1 -eq 20 ]; then
+				echo "equal to 20"
+			elif [ $num1 -gt 20 ]; then
+				echo "greater than 20"
+			else
+				echo "Less than 20"
+			fi
+
+
+## Number Comparison:
+
+			-eq -> equals   --> Returns true if both the values are equal
+			-ne -> not equal -> Returns true if both the values are not equal
+			-lt -> less than
+			-le -> less than or equal to
+			-gt -> greater than
+			-ge -> greater than or equal to
+
+
+##String Comparison:
+
+### Ex:
+
+			#!/bin/bash
+
+			str1="Welcome"
+			str2="Hello"
+			str3="Hello"
+			str4=""
+
+			# Check if length of string is zero or not
+			if [ -z $str4 ]; then
+				echo "String length is zero"
+			fi
+
+			# Check if two strings are equal or not
+			if [ $str2 == $str3 ]; then
+				echo "Strings are equal"
+			fi
+
+			# Check if two strings are equal or not
+			if [ $str1 != $str3 ]; then
+				echo "Strings are not equal"
+			fi
+
+
 
