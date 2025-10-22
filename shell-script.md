@@ -174,7 +174,7 @@
 ## Conditional Statements
  - if, then, elif, else, fi
 
-###Ex:
+### Ex:
 			#!/bin/bash
 			num1=20
 			if [ $num1 -eq 20 ]; then
@@ -183,7 +183,7 @@
 			fi
 
 
-###Ex:
+### Ex:
 
 			#!/bin/bash
 
@@ -198,7 +198,7 @@
 			fi
 
 
-###Ex:
+### Ex:
 
 			#!/bin/bash
 
@@ -223,7 +223,7 @@
 			-ge -> greater than or equal to
 
 
-##String Comparison:
+## String Comparison:
 
 ### Ex:
 
