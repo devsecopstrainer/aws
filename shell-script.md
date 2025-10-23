@@ -251,3 +251,168 @@
 
 
 
+## case statement in shell script
+
+			#!/bin/bash
+
+			read -p "Enter the name of day: " day
+
+			case $day in
+
+				"sun")
+					echo "You have entered Sunday"
+					echo "Sunday is Holiday"
+					;;
+
+				"mon")
+					echo "You have entered Monday"
+					echo "Monday is Working Day"
+					;;
+
+				*)
+					echo "You have entered Invalid Day"
+					echo "Please try again..."
+					;;
+			esac
+
+
+## case statement with Semicolon Operator ;
+
+
+			#!/bin/bash
+
+			read -p "Enter the name of day: " day
+
+			case $day in
+
+				"sun")
+					echo "You have entered Sunday"; echo "Sunday is Holiday";
+					;;
+
+				"mon")
+					echo "You have entered Monday"; echo "Monday is Working Day";
+					;;
+
+				*)
+					echo "You have entered Invalid Day"; echo "Please try again...";
+					;;
+			esac
+
+
+## Logical And Operator &&
+
+			#!/bin/bash
+
+			str1="Hello"
+			str2="Hello"
+			str3="Hello"
+
+			if [[ $str1 == $str2 && $str1 == $str3 ]]; then
+				echo "all are equal"
+			else
+				echo "all are different"
+			fi
+
+
+## Logical Or Operator || 
+
+			#!/bin/bash
+
+			str1="Hello"
+			str2="Welcome"
+			str3="Welcome"
+
+			if [[ $str1 == $str2 || $str2 == $str3 ]]; then
+				echo "all are equal"
+			else
+				echo "all are different"
+			fi
+
+## Function - No arg function:
+
+			#!/bin/bash
+
+			function test() {
+				echo "Function call starts here"
+				echo "test function call"
+				echo "Function call ends here"
+			}
+
+			test
+
+
+## Pass parameter to the function:
+
+			#!/bin/bash
+
+			function test() {
+				echo "Function call starts here"
+				echo $1
+				echo $2
+				echo $3
+			}
+
+			test abc def ghi jkl mno
+
+### Another Ex:
+
+			#!/bin/bash
+
+			function test() {
+				echo "Function call starts here"
+				echo $1
+				echo $2
+				echo $3
+				str1="Hello"
+				str2="Welcome"
+				str3="Welcome"
+				if [[ $str1 == $str2 || $str2 == $str3 ]]; then
+					echo "all are equal"
+				else
+					echo "all are different"
+				fi
+			}
+
+			test abc def ghi
+
+
+## for Loop - Ex-1
+
+			#!/bin/bash
+
+			# print numbrs from 1 to 10 using for loop
+
+			for (( i=1; i<=10; i++ )); do
+				echo $i
+			done
+
+## for Loop - Ex-2
+
+			#!/bin/bash
+
+			days="sun mon tue wed thu fri sat"
+			for day in $days; do
+				echo $day
+			done
+
+
+
+
+while loop: Ex-1
+
+			#!/bin/bash
+			i=1
+			while [[ $i -le 10 ]]; do
+					echo $i
+					let i++
+			done
+
+while loop: Ex-2
+
+			#!/bin/bash
+			i=10
+			while [[ $i -ge 1 ]]; do
+				echo $i
+				let i--
+			done
+
