@@ -1,9 +1,9 @@
 
 ## Storage
 
-Block Storage ==> EBS - Elastic Block Store
-File Storage  ==> EFS - Elastic File System
-Object Storage => S3 - Simple Storage Service
+ - Block Storage ==> EBS - Elastic Block Store
+ - File Storage  ==> EFS - Elastic File System
+ - Object Storage => S3 - Simple Storage Service
 
 ## EBS (Elastic Block Store)
 
