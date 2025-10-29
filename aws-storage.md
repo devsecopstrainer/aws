@@ -66,3 +66,18 @@
 		2. Mount the SSD to the data directory	
 			mount /dev/xvdf /my-ssd/
 
+Create snapshot for EBS Volume.
+
+## EFS - Elastic File System:
+  - Multiple EC2 instances present on different availability zones can use same EFS.
+  - EFS is supported by Linux only, for Windows, we need to use FSX.
+  - No need to provide the size for EFS as it is elastic.
+
+		sudo su -
+		yum install httpd -y
+		systemctl start httpd
+		systemctl status httpd
+		yum install nfs-utils -y
+
+		mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 192.168.0.55:/ /var/www/html - 1A
+		mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 192.168.1.60:/ /var/www/html - 1B
