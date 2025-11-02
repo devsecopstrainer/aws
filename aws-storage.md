@@ -81,3 +81,76 @@ Create snapshot for EBS Volume.
 
 		mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 192.168.0.55:/ /var/www/html - 1A
 		mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 192.168.1.60:/ /var/www/html - 1B
+
+Simple Storage Service - S3
+============================
+ - Scalable object storage service on AWS.
+ - object storage - Storing data as distinct objects.
+ - Store any amount of data in any format.
+ - Each object will be having their own metadata.
+ - Bucket - It is a container for objects, like folders.
+ - Object - It is a file and any metadata that describes the file which we upload.
+ - Public Access - Who can access the bucket.
+ - Storage Class - Different cost/options for S3.
+ - Static web hosting on S3
+ - Versioning
+
+## S3 Usage:
+
+		1. To store the build files - jar files
+		2. Terraform - To store terraform.tfstate file securely S3 which supports locking, versioning, and encryption.
+		3. We can use S3 as a storage location and as a backup location. 
+		4. We can do static website hosting in S3.
+		5. S3 can be used to store huge files for Bigdata analytics.
+		6. Snapshot of EBS and AMI can be stored in S3.
+
+## create a bucket:
+	1. Choose the region: For latency
+	2. Bucket Type:
+		General Purpose : To be stored across multiple availability zones. 
+		Directory : To be stored in single availability zone with faster access.
+	3. Bucket Name:
+		Rules:
+		•	Bucket names must be between 3 (min) and 63 (max) characters long.
+		•	Bucket names can consist only of lowercase letters, numbers, dots (.), and hyphens (-).
+		•	Bucket names must begin and end with a letter or number.
+		•	Bucket names must not contain two adjacent periods.
+		•	Bucket names must not be formatted as an IP address (for example, 192.168.5.4).
+		•	Bucket names must not start with the prefix xn--.
+		•	Bucket names must not start with the prefix sthree-.
+		•	Bucket names must not start with the prefix sthree-configurator.
+		•	Bucket names must not start with the prefix amzn-s3-demo-.
+		•	Bucket names must not end with the suffix -s3alias. This suffix is reserved for access point alias names.
+		•	Bucket names must not end with the suffix --ol-s3. This suffix is reserved for Object Lambda Access Point alias names.
+		•	Bucket names must not end with the suffix .mrap. This suffix is reserved for Multi-Region Access Point names. 
+		•	Bucket names must not end with the suffix --x-s3. This suffix is reserved for directory buckets.
+		•	Bucket names must be unique across all AWS accounts in all the AWS Regions .
+		•	A bucket name cannot be used by another AWS account in the same partition until the bucket is deleted.
+	4. Copy settings from existing bucket if we have.
+	5. Object Ownership - To control the ownership - single or multiple accounts.
+	6. Block Public Access.
+	7. Bucket Versioning - For backup purpose.
+	8. Tags - organizing and tracking buckets
+	9. Encryption
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
