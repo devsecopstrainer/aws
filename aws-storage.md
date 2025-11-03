@@ -135,6 +135,55 @@ Simple Storage Service - S3
 
 
 
+## Versioning:
+
+	You can use S3 Versioning to keep multiple versions of an object in one bucket so that you can restore objects that are accidentally deleted or overwritten. 
+	If you delete an object, instead of removing the object permanently, Amazon S3 inserts a delete marker, which becomes the current object version.
+	If you overwrite an object, Amazon S3 adds a new object version in the bucket. The previous version remains in the bucket and becomes a noncurrent version. You can restore the previous version.
+
+
+## storage class:
+
+	Each object in S3 has a storage class associated with it.
+	S3 offers a range of storage classes for the objects that you store.
+
+### S3 Standard:
+	The default storage class.
+	Suitable for frequently accessed data (more than once a month) with milliseconds access.
+	If you don't specify the storage class when you upload an object, Amazon S3 assigns the S3 Standard storage class. 
+
+### S3 Intelligent-Tiering:
+	Suitable for data with changing or unknown access patterns
+	It optimizes storage costs by automatically moving data to the most cost-effective access tier with a small monthly object monitoring and automation fee.
+
+### Standard-IA:
+	Suitable for infrequently accessed data (once a month) with milliseconds access.
+	Min storage duration = 30 days
+	Min storage duration = Once you upoload the data you need to keep it for certain period of time.
+
+### One Zone-IA:
+	Suitable for infrequently accessed data (once a month) with milliseconds access, to be stored in 1 Availability Zone.
+	Min storage duration = 30 days	
+
+### Glacier Instant Retrieval:
+	Long-lived archive data accessed once a quarter with instant retrieval in milliseconds.
+	Min storage duration = 90 days
+	
+### Glacier Flexible Retrieval:
+	Long-lived archive data accessed once a year with retrieval of minutes to hours.
+	Min storage duration = 90 days
+
+### Glacier Deep Archive:
+	Long-lived archive data accessed less than once a year with retrieval of hours
+	Min storage duration = 180 days
+
+### Reduced redundancy:
+	Noncritical, frequently accessed data with milliseconds access.
+	It is not recommended as S3 Standard is more cost effective.
+
+### Check the S3 storage classes comparison:
+	https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html
+
 
 
 
