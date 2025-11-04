@@ -186,7 +186,10 @@ Simple Storage Service - S3
 
 
 
+## static web hosting:
 
+		A static website is a collection of pre-built HTML, CSS, and JavaScript files that are served to a user's browser exactly as they are stored on the server. 
+		It does not use server-side processing or databases to generate content on the fly, meaning every visitor sees the exact same information.
 
 
 
