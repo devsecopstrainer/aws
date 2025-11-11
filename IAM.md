@@ -20,3 +20,20 @@
 
 ## IAM Groups:
  - In AWS IAM, "groups" are collections of IAM users. Groups allow you to manage permissions for multiple users collectively, rather than individually assigning permissions for each individual user.
+
+  -  Download AWS CLI - https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+   - Install it
+
+## CLI Commands:
+
+  aws --version	
+  aws configure
+
+
+
+## Launch EC2 instance in us east 1 using AWS CLI:
+ - aws ec2 run-instances --image-id ami-0cae6d6fe6048ca2c --count 1 --instance-type t2.micro --key-name test-key --region us-east-1
+
+## Create S3 bucket:
+ - aws s3api create-bucket --bucket testbkt10005 --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
+
