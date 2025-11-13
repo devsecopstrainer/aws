@@ -10,3 +10,18 @@
  - If we do not have any resources then we can delete the default VPC also. We can create default VPC also. 
  - Without VPC, EC2 instances cannot be created.
  - We can create multiple VPCs as well in the same region, but it will create confusion. 
+
+## Subnet:
+ - We need to create subnets under Availability Zones so that we can use that particular availability zone. 
+ - One subnet cannot use multiple Availability Zones. Subnet will always reside under Availability Zone.
+ - We can create multiple subnets under one Availability Zone. 
+ - We should use the same IP address range which we used for creating the VPC.
+ - We cannot use any other series for this. It won’t allow to do so.
+
+## VPC and Subnet:
+ - VPC ia a logically isolated, private network in a public cloud. It is your own secure network.
+ - Subnet is a logical division of a VPC, representing a range of IP addresses within the VPC.
+ - In one region, we can create maximum 5 VPCs and 200 Subnets can be created in 1 vpc.
+ - Once the VPC is created, we cannot change its cidr block range.
+ - If we need a different cidr range, we need to create a new VPC.
+
